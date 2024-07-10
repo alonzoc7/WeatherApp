@@ -1,0 +1,23 @@
+#mainContainer, #upperHalf, #lowerHalf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+#upperHalf, #lowerHalf, .dayBox {
+    border: 1px solid black;
+    margin: 3px;
+}
+#weatherIcon {
+    width: 20vw;
+}
+#lowHigh {
+    display: flex; 
+}
+.dayBox {
+    width: 100%;
+    display: flex;
+}
+.smallIcon {
+    width:10%;
+}
