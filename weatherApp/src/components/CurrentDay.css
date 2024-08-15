@@ -1,0 +1,35 @@
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+#searchContainer {
+    display: flex;
+    margin: 2vw;
+}
+#searchButton {
+    margin-left: 2vw;
+}
+#weatherContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+#weatherIcon {
+    width: 65vw;
+}
+#unitIcon {
+    width: 10vw;
+}
+#magnifyIcon {
+    align-self: flex-start;
+    width: 10vw;
+}
+#welcomeMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
