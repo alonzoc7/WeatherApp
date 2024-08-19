@@ -1,35 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Assistant:wght@200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
 #mainContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
+    height: 100%;
+    font-family: "Asap Condensed", sans-serif;
+    background-color: rgb(228, 220, 229);
 }
 #searchContainer {
     display: flex;
-    margin: 2vw;
+    margin: 2%;
+    width: 90%;
+    height: 10%;
+}
+#textBox {
+    height: 100%;
 }
 #searchButton {
-    margin-left: 2vw;
+    margin-left: 2%;
+    border-radius: 3px;
+    height: 100%;
+}
+#magnifyIcon {
+    align-self: flex-start;
+    height: 100%;
+}
+#welcomeContainer {
+    text-align: center;
+    height: 100%;
 }
 #weatherContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0;
+    height: 100%
+}
+#lo {
+    color: cadetblue;
+    margin-right: 2px;
+}
+#hi {
+    color:firebrick;
+    margin-right: 2px;
+    margin-left: 10px;
+}
+.tempDiv {
+    display: flex;
 }
 #weatherIcon {
-    width: 65vw;
+    width: 100%;
+}
+#invalidContainer {
+    height: 100%;
+}
+#bottomContainer {
+    display: flex;
+    justify-content: space-between;
+}
+#unitButton {
+    margin: 5%;
+    border-radius: 3px;
+    width: 15%;
 }
 #unitIcon {
-    width: 10vw;
+    width: 100%;
 }
-#magnifyIcon {
-    align-self: flex-start;
-    width: 10vw;
+#credit {
+    width: 25%;
+    margin:5%;
+    text-align: center;
+    color:darkolivegreen;
+    font-size: 80%;
 }
-#welcomeMain {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+@media (min-width: 756px){
+    #mainContainer {
+        margin: 2% 25% 5% 25%;
+        border: 1px solid black;
+    }
+    #searchContainer {
+        height: 8%;
+    }
 }

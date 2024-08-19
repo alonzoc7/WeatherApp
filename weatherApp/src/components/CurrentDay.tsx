@@ -68,82 +68,86 @@ function CurrentDay() {
     if (location) {
       if (validSearch) {
         return (
-          <>
-            <div id="weatherContainer">
-              <p>
-                {weatherData.name}, {day.toDateString()}
-              </p>
-              <p>{weatherData.desc}</p>
-              <img
-                id="weatherIcon"
-                src={weatherData.icon}
-                alt="weather image"
-              />
-              <p>
-                {weatherData.temp}&deg;{unit == "imperial" ? "F" : "C"}
-              </p>
-
-              <p>
-                Lo: {weatherData.temp_min}&deg;{unit == "imperial" ? "F" : "C"}{" "}
-                Hi: {weatherData.temp_max}
-                &deg;{unit == "imperial" ? "F" : "C"}
-              </p>
+          <div id="weatherContainer">
+            <h2>
+              {weatherData.name}, {day.toDateString()}
+            </h2>
+            <h3>{weatherData.desc}</h3>
+            <img id="weatherIcon" src={weatherData.icon} alt="weather image" />
+            <h3>
+              {weatherData.temp}&deg;{unit == "imperial" ? "F" : "C"}
+            </h3>
+            <div className="tempDiv">
+              <div className="tempDiv">
+                <h3 id="lo">Lo:</h3>
+                <h3>
+                  {weatherData.temp_min}&deg;{unit == "imperial" ? "F" : "C"}
+                </h3>
+              </div>
+              <div className="tempDiv">
+                <h3 id="hi"> Hi:</h3>
+                <h3>
+                  {weatherData.temp_max}
+                  &deg;{unit == "imperial" ? "F" : "C"}
+                </h3>
+              </div>
             </div>
-          </>
+          </div>
         );
       } else {
         return Invalid();
       }
     }
     return (
-      <>
+      <div id="welcomeContainer">
         <h1>Welcome to my Weather App!</h1>
-        <p>To get started, search a city name!</p>
-      </>
+        <p>To get started, search a city name</p>
+      </div>
     );
   };
   return (
     <div id="mainContainer">
-      <div id="searchContainer">
-        <div className="input-group mb-3">
-          <span className="input-group-text" id="inputGroup-sizing-default">
-            City Name:
-          </span>
-          <input
-            ref={inputRef}
-            type="text"
-            className="form-control"
-            aria-label="locationLabel"
-            aria-describedby="inputGroup-sizing-default"
+      <div id="searchContainer" className="input-group mb-3">
+        <input
+          ref={inputRef}
+          type="text"
+          id="textBox"
+          className="form-control"
+          aria-label="locationLabel"
+          aria-describedby="inputGroup-sizing-default"
+        />
+        <button id="searchButton">
+          <img
+            id="magnifyIcon"
+            src={magnify}
+            alt="search"
+            onClick={handleSearchClick}
           />
-          <button id="searchButton">
-            <img
-              id="magnifyIcon"
-              src={magnify}
-              alt="search"
-              onClick={handleSearchClick}
-            />
-          </button>
-        </div>
+        </button>
       </div>
       {renderWeather()}
-      <button
-        id="unitButton"
-        onClick={() => {
-          let un = unit;
-          unit == "imperial" ? (un = "metric") : (un = "imperial");
-          setUnit(un);
-          if (inputRef.current) {
-            getWeather(inputRef.current["value"], un);
-          }
-        }}
-      >
-        <img
-          id="unitIcon"
-          src={unit == "imperial" ? faren : celc}
-          alt="unit button"
-        />
-      </button>
+      <div id="bottomContainer">
+        <button
+          id="unitButton"
+          onClick={() => {
+            let un = unit;
+            unit == "imperial" ? (un = "metric") : (un = "imperial");
+            setUnit(un);
+            if (inputRef.current) {
+              getWeather(inputRef.current["value"], un);
+            }
+          }}
+        >
+          <img
+            id="unitIcon"
+            src={unit == "imperial" ? faren : celc}
+            alt="unit button"
+          />
+        </button>
+        <a id="credit" href="https://openweathermap.org/api">
+          Powered by OpenWeather API
+        </a>
+      </div>
     </div>
   );
 }
