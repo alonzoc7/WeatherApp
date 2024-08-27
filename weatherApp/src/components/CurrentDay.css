@@ -5,18 +5,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 100%;
+    height: 100vh;
     font-family: "Asap Condensed", sans-serif;
     background-color: rgb(228, 220, 229);
 }
 #searchContainer {
     display: flex;
-    margin: 2%;
+    margin: 5%;
     width: 90%;
     height: 10%;
+    min-height: 0;
 }
 #textBox {
     height: 100%;
+    font-size: 25px;
 }
 #searchButton {
     margin-left: 2%;
@@ -24,19 +26,20 @@
     height: 100%;
 }
 #magnifyIcon {
-    align-self: flex-start;
     height: 100%;
 }
 #welcomeContainer {
     text-align: center;
     height: 100%;
+    min-height: 0;
 }
 #weatherContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0;
-    height: 100%
+    width: 75%;
+    min-height: 0;
 }
 #lo {
     color: cadetblue;
@@ -56,9 +59,13 @@
 #invalidContainer {
     height: 100%;
 }
+
 #bottomContainer {
+    min-height: 0;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 #unitButton {
     margin: 5%;
@@ -76,12 +83,67 @@
     font-size: 80%;
 }
 
+@media (min-width: 425px){
+    #weatherContainer {
+        width: 65%;
+    }
+}
+
 @media (min-width: 756px){
+    body{
+        padding:1% 25% 1% 25%;
+    }
     #mainContainer {
-        margin: 2% 25% 5% 25%;
         border: 1px solid black;
     }
     #searchContainer {
         height: 8%;
+    }
+}
+
+@media (min-width: 1024px){
+    
+    #mainContainer {
+        border: 1px solid black;
+    }
+    #searchContainer {
+        height: 8%;
+    }
+    #textBox {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1440px){
+    #mainContainer {
+        border: 1px solid black;
+    }
+    #weatherContainer {
+        width: 70%;
+    }
+    #searchContainer {
+        height: 10%;
+    }
+    #textBox {
+        font-size: 50px;
+    }
+    #credit {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 2560px){
+    body{
+        padding:3% 35% 3% 35%;
+    }
+    #weatherContainer {
+        width: 85%;
+        
+    }
+    #textBox {
+        font-size: 70px;
+    }
+    h2 {
+        font-size: 65px;
     }
 }
