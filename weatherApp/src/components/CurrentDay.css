@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Assistant:wght@200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    font-family: "Asap Condensed", sans-serif;
+    background-color: rgb(228, 220, 229);
+}
+#searchContainer {
+    display: flex;
+    margin: 5%;
+    width: 90%;
+    height: 10%;
+    min-height: 0;
+}
+#textBox {
+    height: 100%;
+    font-size: 25px;
+}
+#searchButton {
+    margin-left: 2%;
+    border-radius: 3px;
+    height: 100%;
+}
+#magnifyIcon {
+    height: 100%;
+}
+#welcomeContainer {
+    text-align: center;
+    height: 100%;
+    min-height: 0;
+}
+#weatherContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 75%;
+    min-height: 0;
+}
+#lo {
+    color: cadetblue;
+    margin-right: 2px;
+}
+#hi {
+    color:firebrick;
+    margin-right: 2px;
+    margin-left: 10px;
+}
+.tempDiv {
+    display: flex;
+}
+#weatherIcon {
+    width: 100%;
+}
+#invalidContainer {
+    height: 100%;
+}
+
+#bottomContainer {
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+#unitButton {
+    margin: 5%;
+    border-radius: 3px;
+    width: 15%;
+}
+#unitIcon {
+    width: 100%;
+}
+#credit {
+    width: 25%;
+    margin:5%;
+    text-align: center;
+    color:darkolivegreen;
+    font-size: 80%;
+}
+
+@media (min-width: 425px){
+    #weatherContainer {
+        width: 65%;
+    }
+}
+
+@media (min-width: 756px){
+    body{
+        padding:1% 25% 1% 25%;
+    }
+    #mainContainer {
+        border: 1px solid black;
+    }
+    #searchContainer {
+        height: 8%;
+    }
+}
+
+@media (min-width: 1024px){
+    
+    #mainContainer {
+        border: 1px solid black;
+    }
+    #searchContainer {
+        height: 8%;
+    }
+    #textBox {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1440px){
+    #mainContainer {
+        border: 1px solid black;
+    }
+    #weatherContainer {
+        width: 70%;
+    }
+    #searchContainer {
+        height: 10%;
+    }
+    #textBox {
+        font-size: 50px;
+    }
+    #credit {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 2560px){
+    body{
+        padding:3% 35% 3% 35%;
+    }
+    #weatherContainer {
+        width: 85%;
+        
+    }
+    #textBox {
+        font-size: 70px;
+    }
+    h2 {
+        font-size: 65px;
+    }
+}
