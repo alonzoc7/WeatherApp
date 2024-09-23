@@ -77,7 +77,7 @@ function CurrentDay() {
             <h3>
               {weatherData.temp}&deg;{unit == "imperial" ? "F" : "C"}
             </h3>
-            <div className="tempDiv">
+            <div id="tempContainer">
               <div className="tempDiv">
                 <h3 id="lo">Lo:</h3>
                 <h3>
