@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Assistant:wght@200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 #mainContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
+    height: 100%;
     font-family: "Asap Condensed", sans-serif;
     background-color: rgb(228, 220, 229);
 }
@@ -38,20 +44,25 @@
     flex-direction: column;
     align-items: center;
     margin: 0;
-    width: 75%;
+    width: 80%;
     min-height: 0;
+}
+#tempContainer {
+    width: 75%;
+    display: flex;
+}
+.tempDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 #lo {
     color: cadetblue;
-    margin-right: 2px;
+    margin-right: 2%;
 }
 #hi {
     color:firebrick;
-    margin-right: 2px;
-    margin-left: 10px;
-}
-.tempDiv {
-    display: flex;
+    margin-right: 2%;
 }
 #weatherIcon {
     width: 100%;
@@ -68,19 +79,19 @@
     width: 100%;
 }
 #unitButton {
-    margin: 5%;
     border-radius: 3px;
     width: 15%;
+    margin: 2%;
 }
 #unitIcon {
-    width: 100%;
+    width: 90%;
 }
 #credit {
     width: 25%;
-    margin:5%;
     text-align: center;
     color:darkolivegreen;
-    font-size: 80%;
+    font-size: 60%;
+    margin: 2%;
 }
 
 @media (min-width: 425px){
@@ -90,60 +101,73 @@
 }
 
 @media (min-width: 756px){
-    body{
-        padding:1% 25% 1% 25%;
+    #root{
+        margin: 2% 20% 2% 20%;
     }
     #mainContainer {
         border: 1px solid black;
     }
     #searchContainer {
         height: 8%;
+    }
+    #weatherContainer {
+        width: 100%;
+    }
+    #weatherIcon {
+        width: 45%;
+    }
+    #tempContainer {
+        width: 60%;
+    }
+    #unitButton {
+        width: 12%;
+    }
+    #credit {
+        font-size: 80%;
     }
 }
 
 @media (min-width: 1024px){
-    
-    #mainContainer {
-        border: 1px solid black;
+    #root{
+        margin: 2% 30% 2% 30%;
     }
-    #searchContainer {
-        height: 8%;
+    #weatherIcon {
+        width: 55%;
     }
     #textBox {
         font-size: 30px;
     }
+    #tempContainer {
+        width: 55%;
+    }
 }
 
 @media (min-width: 1440px){
-    #mainContainer {
-        border: 1px solid black;
-    }
-    #weatherContainer {
-        width: 70%;
-    }
     #searchContainer {
         height: 10%;
     }
     #textBox {
-        font-size: 50px;
+        font-size: 40px;
     }
-    #credit {
-        font-size: 20px;
+    #weatherIcon {
+        width: 65%;
     }
 }
 
 @media (min-width: 2560px){
-    body{
-        padding:3% 35% 3% 35%;
-    }
-    #weatherContainer {
-        width: 85%;
-        
-    }
     #textBox {
-        font-size: 70px;
+        font-size: 60px;
     }
-    h2 {
+    #weatherContainer > h2 {
+        font-size: 75px;
+    }
+    #weatherContainer > h3 {
         font-size: 65px;
+    }
+    .tempDiv> h3 {
+        font-size: 65px;
+    }
+    #credit {
+        font-size: 30px;
     }
 }
